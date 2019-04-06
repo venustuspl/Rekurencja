@@ -1,0 +1,31 @@
+public class Rekurencja {
+public static void main(String args[]){
+System.out.println("Hejo");
+Sumowanie s = new Sumowanie();
+System.out.println(s.sumaRekurencyjna(4));
+Silnia1 si = new Silnia1();
+System.out.println(si.silnia(4));
+}
+
+public static class Sumowanie {
+
+    public int sumaRekurencyjna(int n){
+        if(n>0){
+            return n+sumaRekurencyjna(n-1);
+        }else
+        {return 0;}
+    }
+}
+
+public static class Silnia1{
+    public int silnia (int n){
+        if(n>1){
+          //System.out.println(n*silnia(n-1));
+            return n*silnia(n-1);
+        }else
+        {return 1;}
+    }
+}
+
+
+}
